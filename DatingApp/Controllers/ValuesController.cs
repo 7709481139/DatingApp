@@ -30,9 +30,10 @@ namespace A91WEBERP.API.Controllers
 
         // GET: api/student/5
          [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            var value = await _context.Values.Where(t => t.Id == id).FirstOrDefaultAsync();
+            return Ok(value);
         }
 
         // POST: api/student
