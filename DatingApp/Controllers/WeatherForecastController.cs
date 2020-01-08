@@ -20,6 +20,7 @@ namespace DatingApp.Controllers
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
+            //Constructor
             _logger = logger;
         }
 
