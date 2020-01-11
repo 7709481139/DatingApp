@@ -8,11 +8,13 @@ namespace DatingApp.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Values>().ToTable("Value");
-            
+            modelBuilder.Entity<User>().ToTable("User");
+
         }
         public DbSet<Values> Values{ get; set; }
+        public DbSet<User> User { get; set; }
 
 
-        
+
     }
 }
