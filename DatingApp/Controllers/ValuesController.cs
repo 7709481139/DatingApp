@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace A91WEBERP.API.Controllers
 {
-    
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
      public class ValuesController : ControllerBase
@@ -29,6 +30,7 @@ namespace A91WEBERP.API.Controllers
         }
 
         // GET: api/student/5
+        [AllowAnonymous]
          [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
