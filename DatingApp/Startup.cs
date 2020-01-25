@@ -42,7 +42,7 @@ namespace DatingApp
                        (Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
                        ValidateIssuer = false,
                        ValidateAudience = false
-                   };
+                   };    
                });
         }
 
