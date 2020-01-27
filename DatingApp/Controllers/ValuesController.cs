@@ -20,8 +20,9 @@ namespace A91WEBERP.API.Controllers
         {
             _context = context;
         }
+        [AllowAnonymous]
         // GET: api/student
-    [HttpGet]
+        [HttpGet]
           public async Task<IActionResult>Get()
         {
             //

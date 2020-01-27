@@ -43,6 +43,7 @@ namespace DatingApp.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            throw new Exception("Access denied!");
             var userFromRepo = await _repo.Login(userForLoginDto.username.ToLower(), userForLoginDto.password);
             if (userFromRepo == null)
                 return Unauthorized();
